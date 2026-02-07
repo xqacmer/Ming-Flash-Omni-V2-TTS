@@ -222,6 +222,23 @@
         height: auto;
         border-radius: 6px;
     }
+    /* 为语言切换按钮添加一些样式 */
+    .lang-toggle {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+    .lang-toggle a {
+        cursor: pointer;
+        text-decoration: none;
+        padding: 0.25em 0.5em;
+        border-radius: 4px;
+        color: #3273dc;
+    }
+    .lang-toggle a.active-lang {
+        font-weight: bold;
+        background-color: #f5f5f5;
+        color: #363636;
+    }
 
 </style>
 <body>
@@ -322,22 +339,86 @@
     </div>
   </section>
 
-<!-- Technical Highlights -->
-<!-- <div class="main-container2">
-<div class="hero-body">
-    <div class="container is-max-desktop is-centered has-text-centered">
-    <h2 class="title is-3">🚀 Technical Highlights</h2>
-    <div class="content has-text-justified">
-        <p>
-        <strong>- 🔥 First unified continuous speech tokenizer for both understanding and generation tasks (<a href="https://github.com/inclusionAI/MingTok-Audio"><span style="color: rgb(44, 185, 250); font-weight: bold;">MingTok-Audio</span></a>):</strong> Ming-UniAudio proposes a unified continuous speech tokenizer MingTok-Audio based on a VAE framework with a causal Transformer architecture, the first continuous speech tokenizer to effectively integrate semantic and acoustic features, and enables a closed-loop system with LLMs through hierarchical feature representations, makes it suitable for both understanding and generation tasks.<br>
-        <strong>- 🔥 First Speech LLM with unifed continuous tokenizer for both understanding and generation: (<a href="https://huggingface.co/inclusionAI/Ming-UniAudio-16A3B"><span style="color: rgb(44, 185, 250); font-weight: bold;">Ming-UniAudio</span></a>):</strong> We pretrain an end-to-end unified speech language model with a single LLM backbone for both understanding and generation tasks, enhanced with a Diffusion Head to ensure high-fidelity speech synthesis.<br>
-        <strong>- 🔥 First universal free-form speech editing model for semantic and acoustic tasks without temporal regime: (<a href="https://huggingface.co/inclusionAI/Ming-UniAudio-16A3B-Edit"><span style="color: rgb(44, 185, 250); font-weight: bold;">Ming-UniAudio-Edit</span></a>):</strong> We introduce the first instruction-guided, free-form speech editing framework that supports comprehensive semantic and acoustic edits without requiring explicit edit regions, along with Ming-Freeform-Audio-Edit, the first open-source evaluation set for such tasks.<br>
-        <strong>- 🔥 First benchmark for free-form speech editing: (<a href="https://huggingface.co/inclusionAI/Ming-Freeform-Audio-Edit-Benchmark"><span style="color: rgb(44, 185, 250); font-weight: bold;">Ming-Freeform-Audio-Edit-Benchmark</span></a>):</strong> We propose Audio-Edit-Benchmark, the first open-source free-form evaluation set comprising editing tasks of four semantic and five acoustic types, to evaluate the model’s editing performance.<br>
-        </p>
-    </div>
+<script>
+    function switchLanguage(lang) {
+        // 获取所有需要操作的元素
+        const enDiv = document.getElementById('abstract-en');
+        const zhDiv = document.getElementById('abstract-zh');
+        const enToggle = document.getElementById('toggle-en');
+        const zhToggle = document.getElementById('toggle-zh');
+        // 步骤 2: 获取标题元素
+        const titleElement = document.getElementById('abstract-title');
+
+        if (lang === 'zh') {
+            // 显示/隐藏内容
+            zhDiv.style.display = 'block';
+            enDiv.style.display = 'none';
+            // 更新按钮样式
+            zhToggle.classList.add('active-lang');
+            enToggle.classList.remove('active-lang');
+            // 更新标题文本
+            titleElement.textContent = '特色能力'; 
+        } else { // lang === 'en'
+            // 显示/隐藏内容
+            enDiv.style.display = 'block';
+            zhDiv.style.display = 'none';
+            // 更新按钮样式
+            enToggle.classList.add('active-lang');
+            zhToggle.classList.remove('active-lang');
+            // 更新标题文本
+            titleElement.textContent = 'Featured Abilities';
+        }
+    }
+</script>
+
+<div class="main-container2">
+    <div class="hero-body">
+        <div class="container is-max-desktop is-centered has-text-centered">
+            <!-- 步骤 1: 给 h2 标签添加一个 ID -->
+            <h2 class="title is-3" id="abstract-title">Featured Abilities</h2>
+            
+            <div class="lang-toggle">
+                <a id="toggle-zh" onclick="switchLanguage('zh')">中文</a> | 
+                <a id="toggle-en" class="active-lang" onclick="switchLanguage('en')">English</a>
+            </div>
+
+            <div class="content has-text-justified">
+                <!-- 中文内容容器 (默认隐藏) -->
+                <div id="abstract-zh" style="display: none;">
+                    <p>
+                        <strong>团队正式推出的新一代语音生成大模型MING-TTS FAMILY，以五大特色能力，开启“指令即声音”的智能音频新纪元。</strong><br><br>
+                        <strong>- 🔥 指令级细粒度声学控制：让声音拥有“导演思维”:</strong> 一句指令即可精准调节声音的声学特征与表达风格。比如一句“用温柔粤语正常速度讲述，用高兴情绪表达”，即可精准调控生成的语速、语调、音量、情感乃至方言，赋予声音丰富的表现力。粤语生成准确率高达 93%，显著超越CosyVoice3；同时，模型全面支持播客级长音频生成，表达节奏自然连贯，精准诠释“声随指令动”的智能语音创作理念，为有声书、播客等内容提供沉浸式、专业级的声音呈现。<br>
+                        <strong>- 🔥 高保真低帧率Tokenizer：效率与音质的双重飞跃:</strong> 研发高保真低帧率全音频建模的tokenizer。在 44.1kHz 高保真采样下，将表征帧率压缩至 12.5Hz，结合下游LM“分块融合”（Patch-by-Patch）策略，使LLM推理帧率低至 3.1Hz。这不仅带来了数倍的推理加速，更实现了涵盖语音、音乐与环境声的高质量、轻量化音频生成。<br>
+                        <strong>- 🔥 自然语言音色定义：一句话，定制专属声线:</strong> 音色定义，由你决定！无需上传参考音频即可生成专属音色，一句“30岁知性主播女声，带着专业播音腔播报新闻”，模型即刻生成高度匹配音色。在公开评测 Instruct-TTS-Eval 中，客观指标全面领先 Qwen3-TTS，主观评测音色与自然度创开源SOTA，让个性化声音创作零门槛。<br>
+                        <strong>- 🔥 百变精品音色矩阵：开箱即用的专业声库:</strong> 内置 100+ 精调音色，开箱即用！包含100+经典动漫角色、影视剧人物等，覆盖了多元场景。无需Prompt音频，一句“用郭德纲的声音讲述”，即可一键调用郭德纲的音色。<br>
+                        <strong>- 🔥 业界首创泛音频联合生成：语音×音乐×环境音，一气呵成:</strong> 业界首个实现 Speech、Music、Audio三模态单通道生成 的大模型！基于连续表征自回归架构 + Diffusion Transformer（DiT），智能融合人声与背景元素——
+                                        ✅ 播客自动配乐
+                                        ✅ 演讲叠加环境音
+                                        真正实现“声临其境”，为影视等领域打开全场景音频创作新空间。<br><br>
+                        <strong>[MING-TTS FAMILY] 重新定义声音创作：不止于技术突破，更开启语音、音乐与环境音融合的新范式，让“声”临其境触手可及。</strong>
+                    </p>
+                </div>
+
+                <!-- 英文内容容器 (默认显示) -->
+                <div id="abstract-en">
+                    <p>
+                        <strong>MING-TTS FAMILY, officially launched by INCLUSION AI team,  which is  ushering in a new era of intelligent audio characterized by "Instruction-to-Audio" synthesis. This breakthrough is powered by five core capabilities.</strong><br><br>
+                        <strong>- 🔥 Instruction-Level Fine-Grained Acoustic Control: Voicing with a "Director’s Mindset":</strong> Our model enables precise adjustment of acoustic features and expressive styles through simple natural language prompts. For instance, a single instruction like "Speak at a normal pace in gentle Cantonese with a happy tone" can accurately modulate speech rate, intonation, volume, emotion, and even specific dialects, imbuing the voice with rich expressiveness.
+We have achieved a 93% accuracy rate in Cantonese generation, significantly outperforming CosyVoice3. Furthermore, the model fully supports podcast-grade long-form audio generation with natural, coherent rhythmic flow. This perfectly embodies the concept of "Voice-on-Command"—an intelligent synthesis paradigm that delivers immersive, professional-grade audio for audiobooks, podcasts, and digital storytelling.<br>
+                        <strong>- 🔥 High-Fidelity, Low-Framerate Tokenizer: A Dual Leap in Efficiency and Audio Quality:</strong> We have developed a high-fidelity, low-framerate tokenizer designed for full-audio modeling. By compressing the representation framerate to 12.5Hz under a 44.1kHz high-fidelity sampling rate—and integrating a "Patch-by-Patch" fusion strategy for downstream Large Language Models (LLMs)—we have successfully reduced the LLM inference framerate to as low as 3.1Hz. This approach not only delivers a multi-fold acceleration in inference speed but also enables high-quality, lightweight audio generation across a broad spectrum of content, including speech, music, and ambient sound.<br>
+                        <strong>- 🔥 Natural Language Timbre Definition: Your Custom Voice, One Sentence Away:</strong> Define your voice, your way. Generate unique timbres without the need for reference audio. With a prompt as simple as "A sophisticated 30-year-old female anchor reporting news with a professional broadcast tone," the model instantly synthesizes a perfectly matched voice. In the Instruct-TTS-Eval public benchmark, our model's objective metrics lead Qwen3-TTS across the board. Furthermore, its subjective ratings for timbre and naturalness have set a new open-source SOTA (State-of-the-Art), removing all barriers to personalized voice creation.<br>
+                        <strong>- 🔥 Versatile Premium Timbre Matrix: A Professional Out-of-the-Box Library:</strong> Over 100 fine-tuned timbres, ready for immediate use. Our library includes 100+ iconic anime characters, film and TV personalities, and a diverse range of situational voices. No prompt audio is required—simply say "Narrate in the voice of Guo Degang" to instantly invoke a specific persona.<br>
+                        <strong>- 🔥 Industry-First Universal Audio Co-Generation: Seamless Fusion of Speech, Music, and Sound:</strong> The industry’s first Large Model to achieve single-channel, tri-modal generation of Speech, Music and sound. Built on a Continuous Representation Autoregressive architecture combined with a Diffusion Transformer (DiT), the model intelligently fuses vocals with background elements:
+                            ✅ Automatic podcast scoring (voice with background music)
+                            ✅ Speech with layered environmental acoustics
+                            This achieves true "Sonic Immersion," unlocking new creative frontiers for film, television, and multimedia production.<br><br>
+                        <strong>[MING-TTS FAMILY] Redefining Audio Creation: Beyond a mere technical breakthrough, we are establishing a new paradigm where speech, music and sound converge, making immersive audio experiences more accessible than ever.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-</div> -->
 
 <div class="main-container">
     <h2 class="box-title-vedio">The Introduction Video of Ming-Flash-Omni-V2-TTS</h2>
