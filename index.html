@@ -273,7 +273,7 @@
               <div class="publication-links">
                 <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2511.05516" target="_blank"
+                  <a href="" target="_blank"
                     class="external-link button is-normal is-rounded is-white">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -284,7 +284,7 @@
 
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://github.com/inclusionAI/Ming-UniAudio" target="_blank"
+                  <a href="" target="_blank"
                     class="external-link button is-normal is-rounded is-white">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -295,14 +295,14 @@
 
 
                 <span class="link-block">
-                    <a href="https://huggingface.co/inclusionAI/Ming-UniAudio-16B-A3B" target="_blank" class="external-link button is-normal is-rounded is-white">
+                    <a href="" target="_blank" class="external-link button is-normal is-rounded is-white">
                         <span class="icon">🤗</span>
                         <span>Hugging Face</span>
                     </a>
                 </span>
 
                 <span class="link-block">
-                    <a href="https://modelscope.cn/models/inclusionAI/Ming-UniAudio-16B-A3B" target="_blank" class="external-link button is-normal is-rounded is-white">
+                    <a href="" target="_blank" class="external-link button is-normal is-rounded is-white">
                         <span class="icon">🤖</span>
                         <span>ModelScope</span>
                     </a>
@@ -339,7 +339,15 @@
 </div>
 </div> -->
 
-    <!-- Edit -->
+<div class="main-container">
+    <h2 class="box-title-vedio">The Introduction Video of Ming-Flash-Omni-V2-TTS</h2>
+
+    <div class="video-container2">
+        <video src="static/audio/Ming-UniAudio-1003.mp4" controls></video>
+    </div>
+</div>
+
+<!-- Edit -->
 <div class="main-container">
     <div class="content-box">
     <h2 class="box-title">音色控制--支持结构化和自然指令控制</h2>
@@ -354,19 +362,62 @@
                 <table class="data-table">
                     <thead>
                             <tr>
-                                <th>Instruction</th>
                                 <th>Input Prompt</th>
                                 <th>Target Text</th>
+                                <th>Instruction1</th>
+                                <th>TTS Result</th>
+                                <th>Instruction2</th>
                                 <th>TTS Result</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>insert '简直' after the character or word at index 8.</td>
-                                <td>真是个浪漫的邂逅可以说是英雄救美了</td>
-                                <td>真是个浪漫的邂逅简直可以说是英雄救美了</td>
-                                <td><audio controls src="static/audio/edit/insert_1.wav"></audio></td>
-                                <td><audio controls src="static/audio/edit/insert_1_1.wav"></audio></td>
+                                <td><audio controls src="static/audio/basic/bs11.wav"></audio></td>
+                                <td>导航开始，全程二十五公里，预计需要十二分钟。</td>
+                                <td>语速：慢速</td>
+                                <td><audio controls src="static/audio/basic/bs12.wav"></audio></td>
+                                <td>语速：快速</td>
+                                <td><audio controls src="static/audio/basic/bs13.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls src="static/audio/basic/bs21.wav"></audio></td>
+                                <td>烟雨弥漫下，山环绕着水耸立着，水环绕着山流淌着。</td>
+                                <td>语速慢一点</td>
+                                <td><audio controls src="static/audio/basic/bs22.wav"></audio></td>
+                                <td>语速快一点</td>
+                                <td><audio controls src="static/audio/basic/bs23.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls src="static/audio/basic/bs31.wav"></audio></td>
+                                <td>目前共享出行市场处于高速增长阶段。</td>
+                                <td>音量：低</td>
+                                <td><audio controls src="static/audio/basic/bs32.wav"></audio></td>
+                                <td>音量：高</td>
+                                <td><audio controls src="static/audio/basic/bs33.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls src="static/audio/basic/bs41.wav"></audio></td>
+                                <td>北京在出行规模，城市影响力方面表现优异。</td>
+                                <td>音量尽量低一点</td>
+                                <td><audio controls src="static/audio/basic/bs42.wav"></audio></td>
+                                <td>音量尽量高一点</td>
+                                <td><audio controls src="static/audio/basic/bs43.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls src="static/audio/basic/bs51.wav"></audio></td>
+                                <td>他们脱掉笨重的冬衣，走起路来腰杆挺直步履轻盈。</td>
+                                <td>基频：低</td>
+                                <td><audio controls src="static/audio/basic/bs52.wav"></audio></td>
+                                <td>基频：高</td>
+                                <td><audio controls src="static/audio/basic/bs53.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls src="static/audio/basic/bs61.wav"></audio></td>
+                                <td>自动驾驶将大幅提升出行安全，效率。</td>
+                                <td>基频低一点</td>
+                                <td><audio controls src="static/audio/basic/bs62.wav"></audio></td>
+                                <td>基频高一点</td>
+                                <td><audio controls src="static/audio/basic/bs63.wav"></audio></td>
                             </tr>
                         </tbody>
                 </table>
@@ -388,6 +439,7 @@
                         <tr>
                             <th>Instruction</th>
                             <th>Input Prompt</th>
+                            <th>Conversion Type</th>
                             <th>Target Text</th>
                             <th>TTS Result</th>
                         </tr>
@@ -396,60 +448,70 @@
                         <tr>
                             <td>方言：广粤话</td>
                             <td><audio controls src="static/audio/dialect/dialect11.wav"></audio></td>
+                            <td>广粤话 -> 广粤话</td>
                             <td>佢系头大冇脑脑大生草种</td>
                             <td><audio controls src="static/audio/dialect/dialect_1.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>方言：广粤话</td>
                             <td><audio controls src="static/audio/dialect/dialect22.wav"></audio></td>
+                            <td>广粤话 -> 广粤话</td>
                             <td>今个周末全场货品低至五折，数量有限，卖晒就冇?喇。</td>
                             <td><audio controls src="static/audio/dialect/dialect_2.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>请用广粤话表达</td>
                             <td><audio controls src="static/audio/dialect/dialect33.wav"></audio></td>
+                            <td>广粤话 -> 广粤话</td>
                             <td>我觉得社会企业同个人都有责任</td>
                             <td><audio controls src="static/audio/dialect/dialect_3.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>用广粤话说，越地道越好。</td>
                             <td><audio controls src="static/audio/dialect/dialect44.wav"></audio></td>
+                            <td>普通话 -> 广粤话</td>
                             <td>你嚟探我，我真系好感动，好耐冇见你啦！</td>
                             <td><audio controls src="static/audio/dialect/dialect_4.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>以广粤话的口语风格来表达。</td>
                             <td><audio controls src="static/audio/dialect/dialect55.wav"></audio></td>
+                            <td>普通话 -> 广粤话</td>
                             <td>快啲啦，唔好再拖拖拉拉，大家都等紧你开会呀</td>
                             <td><audio controls src="static/audio/dialect/dialect_5.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>方言：川渝话</td>
                             <td><audio controls src="static/audio/dialect/dialect66.wav"></audio></td>
+                            <td>川渝话 -> 川渝话</td>
                             <td>你要自己打扮，不穿咋个晓得穿起漂不漂亮嘛？看我们这新款多时尚。</td>
                             <td><audio controls src="static/audio/dialect/dialect_6.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>方言：川渝话</td>
                             <td><audio controls src="static/audio/dialect/dialect77.wav"></audio></td>
+                            <td>川渝话 -> 川渝话</td>
                             <td>赛尔号那个时候，才出来的时候，还是他那个机制，还是特别好耍的。</td>
                             <td><audio controls src="static/audio/dialect/dialect_7.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>请用川渝话表达</td>
                             <td><audio controls src="static/audio/dialect/dialect88.wav"></audio></td>
+                            <td>川渝话 -> 川渝话</td>
                             <td>哎，刚刚晚上想吃点啥子？煮点火锅要得。</td>
                             <td><audio controls src="static/audio/dialect/dialect_8.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>模仿川渝话的语气来表达</td>
                             <td><audio controls src="static/audio/dialect/dialect99.wav"></audio></td>
+                            <td>普通话 -> 川渝话</td>
                             <td>你晓不晓得？你啥我都喜欢，嗯，就是有一点不喜欢装。</td>
                             <td><audio controls src="static/audio/dialect/dialect_9.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>挑战一下用川渝话的味儿来朗读</td>
                             <td><audio controls src="static/audio/dialect/dialect1010.wav"></audio></td>
+                            <td>普通话 -> 川渝话</td>
                             <td>你那哈屋头还有电脑，那时候就已经先进了。</td>
                             <td><audio controls src="static/audio/dialect/dialect_10.wav"></audio></td>
                         </tr>
@@ -470,6 +532,7 @@
                         <tr>
                             <th>Instruction</th>
                             <th>Input Prompt</th>
+                            <th>Conversion Type</th>
                             <th>Target Text</th>
                             <th>TTS Result</th>
                         </tr>
@@ -478,78 +541,91 @@
                         <tr>
                             <td>情感: 高兴</td>
                             <td><audio controls src="static/audio/emotion/emo11.wav"></audio></td>
+                            <td>中性 -> 高兴</td>
                             <td>If these examinations are held orally, they may be known colloquially as "orals".</td>
                             <td><audio controls src="static/audio/emotion/emo12.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>情感: 愤怒</td>
                             <td><audio controls src="static/audio/emotion/emo21.wav"></audio></td>
+                            <td>中性 -> 愤怒</td>
                             <td>I’m done arguing with you. You're not worth my time!</td>
                             <td><audio controls src="static/audio/emotion/emo22.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>情感: 愤怒</td>
                             <td><audio controls src="static/audio/emotion/emo31.wav"></audio></td>
+                            <td>中性 -> 愤怒</td>
                             <td>In cities, driving speeds are set by which lane a driver is in.</td>
                             <td><audio controls src="static/audio/emotion/emo32.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>情感: 悲伤</td>
                             <td><audio controls src="static/audio/emotion/emo41.wav"></audio></td>
+                            <td>中性 -> 悲伤</td>
                             <td>Everything has changed. The promises and dreams we once had are shattered. How should I face this?</td>
                             <td><audio controls src="static/audio/emotion/emo42.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>情感: 高兴</td>
                             <td><audio controls src="static/audio/emotion/emo51.wav"></audio></td>
+                            <td>中性 -> 高兴</td>
                             <td>But it does not allow for adding new members to interfaces.</td>
                             <td><audio controls src="static/audio/emotion/emo52.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>情感: 愤怒</td>
                             <td><audio controls src="static/audio/emotion/emo61.wav"></audio></td>
+                            <td>愤怒 -> 愤怒</td>
                             <td>港湾道是每年农历新年举行的香港新春花车巡游的路线之一。</td>
                             <td><audio controls src="static/audio/emotion/emo62.wav"></audio></td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td>情感: 高兴</td>
                             <td><audio controls src="static/audio/emotion/emo71.wav"></audio></td>
+                            <td>高兴 -> 高兴</td>
                             <td>蚊式轰炸机是英国二次世界大战时期服役的一款双发动机轰炸机。</td>
                             <td><audio controls src="static/audio/emotion/emo72.wav"></audio></td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td>情感: 悲伤</td>
                             <td><audio controls src="static/audio/emotion/emo81.wav"></audio></td>
+                            <td>悲伤 -> 悲伤</td>
                             <td>我觉得自己好像在黑暗中迷失了，再也找不到出口了。</td>
                             <td><audio controls src="static/audio/emotion/emo82.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>情感: 高兴</td>
                             <td><audio controls src="static/audio/emotion/emo91.wav"></audio></td>
+                            <td>中性 -> 高兴</td>
                             <td>我竟然抢到了陈奕迅的演唱会门票！太棒了！终于可以现场听一听他的歌声了！</td>
                             <td><audio controls src="static/audio/emotion/emo92.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>情感: 悲伤</td>
                             <td><audio controls src="static/audio/emotion/emo101.wav"></audio></td>
+                            <td>悲伤 -> 悲伤</td>
                             <td>我们俩从一开始就君子之交，都说好啦，背信弃义出尔反尔的是她，我告诉你这件事我是受害者。</td>
                             <td><audio controls src="static/audio/emotion/emo102.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>表达时要悲伤一点。</td>
                             <td><audio controls src="static/audio/emotion/emo111.wav"></audio></td>
+                            <td>悲伤 -> 悲伤</td>
                             <td>有些软体开发者也注意到软体度量已成为软体开发过程中的一部份。</td>
                             <td><audio controls src="static/audio/emotion/emo112.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>把这件事说得高兴一点。</td>
                             <td><audio controls src="static/audio/emotion/emo121.wav"></audio></td>
+                            <td>高兴 -> 高兴</td>
                             <td>I bought my first mountain bike with my own earnings, a Merida Warrior 500! Go me!</td>
                             <td><audio controls src="static/audio/emotion/emo122.wav"></audio></td>
                         </tr>
                         <tr>
                             <td>表达时，请务必流露出高兴的情感。</td>
                             <td><audio controls src="static/audio/emotion/emo131.wav"></audio></td>
+                            <td>中性 -> 高兴</td>
                             <td>I ran into a teacher I hadn’t seen in years at the coffee shop today. He still remembered me, and we talked about so many fun memories.</td>
                             <td><audio controls src="static/audio/emotion/emo132.wav"></audio></td>
                         </tr>
@@ -560,7 +636,7 @@
 
     </div>
 
-    <!-- Acoustic Editing - fangyan -->
+    <!-- Speech - 名人IP -->
     <div class="acoustic-editing-module">
     <div class="content-box">
         
@@ -572,67 +648,68 @@
                 <thead>
                         <tr>
                             <th>Instruction</th>
-                            <th>Input Prompt</th>
                             <th>Target Text</th>
                             <th>TTS Result</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td><audio controls src="static/audio/emotion/emo11.wav"></audio></td>
-                            <td>If these examinations are held orally, they may be known colloquially as "orals".</td>
-                            <td><audio controls src="static/audio/emotion/emo12.wav"></audio></td>
-                        </tr>
-                        
-                    </tbody>
-            </table>
-        </div>
-    </div>
-    </div>
-
-    <!-- Acoustic Editing - Speed -->
-    <div class="acoustic-editing-module">
-    <div class="content-box">
-        
-        <h2 class="box-title">Acoustic Editing - Speed</h2>
-        
-        <div class="scrollable-table-container">
-            
-            <table class="data-table">
-                <thead>
-                        <tr>
-                            <th>Instruction</th>
-                            <th>Transcription</th>
-                            <th>Before Edit</th>
-                            <th>Speechedit Result</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>adjusts the speed to 0.5.</td>
-                            <td>我用胸抵住车把，掌握方向，速度一点也不比别人慢。</td>
-                            <td><audio controls src="static/audio/edit/sp1.wav"></audio></td>
-                            <td><audio controls src="static/audio/edit/sp11.wav"></audio></td>
+                            <td>IP: 于谦</td>
+                            <td>比如无法表现掐烟头动作，所以还是决定采用真烟。</td>
+                            <td><audio controls src="static/audio/ip/ip3.wav"></audio></td>
                         </tr>
                         <tr>
-                            <td>adjusts the speed to 0.7.</td>
-                            <td>There is a growing body of case law on Bayh-Dole.</td>
-                            <td><audio controls src="static/audio/edit/sp4.wav"></audio></td>
-                            <td><audio controls src="static/audio/edit/sp44.wav"></audio></td>
+                            <td>IP: 甄嬛传_四郎</td>
+                            <td>市场认同离不开一系列，准确而有效的市场宣传和推广。</td>
+                            <td><audio controls src="static/audio/ip/ip1.wav"></audio></td>
                         </tr>
                         <tr>
-                            <td>adjusts the speed to 1.3.</td>
-                            <td>Cribb was born near Bristol but moved to London before starting professional fighting.</td>
-                            <td><audio controls src="static/audio/edit/sp3.wav"></audio></td>
-                            <td><audio controls src="static/audio/edit/sp33.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td>adjusts the speed to 2.</td>
+                            <td>IP: 雍正王朝_雍正</td>
                             <td>切实帮助困难群众解决生产生活中，遇到的困难和问题。</td>
-                            <td><audio controls src="static/audio/edit/sp2.wav"></audio></td>
-                            <td><audio controls src="static/audio/edit/sp22.wav"></audio></td>
+                            <td><audio controls src="static/audio/ip/ip2.wav"></audio></td>
                         </tr>
+                        <tr>
+                            <td>IP: 蜡笔小新_野原新之助 (小新)</td>
+                            <td>对于家长的担心，延安市宝塔区教育局副局长艾庆明表示。</td>
+                            <td><audio controls src="static/audio/ip/ip4.wav"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>请用小猪佩奇里佩奇的风格说话</td>
+                            <td>厦门大学教授雷慧英，在二零零六年的一篇论文中，提供的数据更详细。</td>
+                            <td><audio controls src="static/audio/ip/ip5.wav"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>模仿西游记里唐僧的风格说话</td>
+                            <td>令我吃惊的是，这个经理还试图和我谈论中国诗歌。</td>
+                            <td><audio controls src="static/audio/ip/ip6.wav"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>我想听听康熙王朝里青年康熙的那种腔调</td>
+                            <td>那只是因为他身为人类的习惯，暂时无法改掉罢了。</td>
+                            <td><audio controls src="static/audio/ip/ip7.wav"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>请用康熙王朝里康熙的风格说话</td>
+                            <td>不仅仅是厄齐尔一人，对尼尔森的一线队首秀印象深刻。</td>
+                            <td><audio controls src="static/audio/ip/ip8.wav"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>克隆一下灵小甄的说话腔调。</td>
+                            <td>这款产品的名字，叫变态坑爹牛肉丸。</td>
+                            <td><audio controls src="static/audio/ip/ip9.wav"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>模仿灵梦的风格。</td>
+                            <td>认为在中文歌曲里，夹杂几句英文就很时髦。</td>
+                            <td><audio controls src="static/audio/ip/ip10.wav"></audio></td>
+                        </tr>
+                        <tr>
+                            <td>麻烦学一下灵岩的口音</td>
+                            <td>届时会按照原定计划，与国防部签署相关以地换地协议。</td>
+                            <td><audio controls src="static/audio/ip/ip11.wav"></audio></td>
+                        </tr>
+
+                        
                     </tbody>
             </table>
         </div>
@@ -773,11 +850,11 @@
                                 <td><audio controls src="static/audio/podcast/pod11.wav"></audio></td>
                                 <td><audio controls src="static/audio/podcast/pod12.wav"></audio></td>
                                 <td>
-                                    0: 你可以说一下，就大概说一下，可能虽然我也不知道，我看过那部电影没有。<br>
-                                    1: 就是那个叫什么，变相一节课的嘛。<br>
-                                    0: 嗯。<br>
-                                    1: 一部搞笑的电影。<br>
-                                    0: 一部搞笑的。<br>
+                                    speaker_1: 你可以说一下，就大概说一下，可能虽然我也不知道，我看过那部电影没有。<br>
+                                    speaker_2: 就是那个叫什么，变相一节课的嘛。<br>
+                                    speaker_1: 嗯。<br>
+                                    speaker_2: 一部搞笑的电影。<br>
+                                    speaker_1: 一部搞笑的。<br>
                                 </td>
                                 <td><audio controls src="static/audio/podcast/pod13.wav"></audio></td>
                             </tr>
@@ -785,11 +862,11 @@
                                 <td><audio controls src="static/audio/podcast/pod21.wav"></audio></td>
                                 <td><audio controls src="static/audio/podcast/pod22.wav"></audio></td>
                                 <td>
-                                    0: 所以你想成功的话，就推荐你看这些书。<br>
-                                    1: 我会有时间去看一看的。<br>
-                                    0: 要是像我看的话，我就会感觉特别的。<br>
-                                    1: 枯燥。<br>
-                                    0: 对枯燥无聊毕竟是古文也看不懂除非那些。<br>
+                                    speaker_1: 所以你想成功的话，就推荐你看这些书。<br>
+                                    speaker_2: 我会有时间去看一看的。<br>
+                                    speaker_1: 要是像我看的话，我就会感觉特别的。<br>
+                                    speaker_2: 枯燥。<br>
+                                    speaker_1: 对枯燥无聊毕竟是古文也看不懂除非那些。<br>
                                 </td>
                                 <td><audio controls src="static/audio/podcast/pod23.wav"></audio></td>
                             </tr>
@@ -798,11 +875,11 @@
                                 <td><audio controls src="static/audio/podcast/pod31.wav"></audio></td>
                                 <td><audio controls src="static/audio/podcast/pod32.wav"></audio></td>
                                 <td>
-                                    0: 知道家长在考虑什么让家长也知道孩子们在考虑什么。<br>
-                                    1: 对。<br>
-                                    0: 减少矛盾。<br>
-                                    1: 对，就是感觉其实出这些电影或者电视剧，也是挺好的让彼此更加了解一下，我感觉如果是一个家长和一个小孩儿，去看电视剧的话，收获也是蛮多的。<br>
-                                    0: 那你还有什么比较好的电影介绍给我呢。<br>
+                                    speaker_1: 知道家长在考虑什么让家长也知道孩子们在考虑什么。<br>
+                                    speaker_2: 对。<br>
+                                    speaker_1: 减少矛盾。<br>
+                                    speaker_2: 对，就是感觉其实出这些电影或者电视剧，也是挺好的让彼此更加了解一下，我感觉如果是一个家长和一个小孩儿，去看电视剧的话，收获也是蛮多的。<br>
+                                    speaker_1: 那你还有什么比较好的电影介绍给我呢。<br>
                                 </td>
                                 <td><audio controls src="static/audio/podcast/pod33.wav"></audio></td>
                             </tr>
@@ -811,11 +888,11 @@
                                 <td><audio controls src="static/audio/podcast/pod41.wav"></audio></td>
                                 <td><audio controls src="static/audio/podcast/pod42.wav"></audio></td>
                                 <td>
-                                    0: 上个厕所，然后那有专门的人给你，就是你上厕所之前，专门有个人给你递纸了。<br>
-                                    1: 对，上个厕所会出来给你递毛巾。<br>
-                                    0: 啊对，让你去擦手这些什么的。<br>
-                                    1: 是的。<br>
-                                    0: 服务，服务非常周到，不过也有少数人就说，这个服务实在太久了，就是，就，就是像那种，就是那个。<br>
+                                    speaker_1: 上个厕所，然后那有专门的人给你，就是你上厕所之前，专门有个人给你递纸了。<br>
+                                    speaker_2: 对，上个厕所会出来给你递毛巾。<br>
+                                    speaker_1: 啊对，让你去擦手这些什么的。<br>
+                                    speaker_2: 是的。<br>
+                                    speaker_1: 服务，服务非常周到，不过也有少数人就说，这个服务实在太久了，就是，就，就是像那种，就是那个。<br>
                                 </td>
                                 <td><audio controls src="static/audio/podcast/pod43.wav"></audio></td>
                             </tr>
@@ -824,11 +901,11 @@
                                 <td><audio controls src="static/audio/podcast/pod51.wav"></audio></td>
                                 <td><audio controls src="static/audio/podcast/pod52.wav"></audio></td>
                                 <td>
-                                    0: 什么东西啊？<br>
-                                    1: 叫那个的哪吒的那个。<br>
-                                    0: 啊，那个哪吒，但是我没有去看一看嘛。<br>
-                                    1: 我也没看过。<br>
-                                    0: 我当时好像是本来是要去看的。<br>
+                                    speaker_1: 什么东西啊？<br>
+                                    speaker_2: 叫那个的哪吒的那个。<br>
+                                    speaker_1: 啊，那个哪吒，但是我没有去看一看嘛。<br>
+                                    speaker_2: 我也没看过。<br>
+                                    speaker_1: 我当时好像是本来是要去看的。<br>
                                 </td>
                                 <td><audio controls src="static/audio/podcast/pod53.wav"></audio></td>
                             </tr>
@@ -837,11 +914,11 @@
                                 <td><audio controls src="static/audio/podcast/pod61.wav"></audio></td>
                                 <td><audio controls src="static/audio/podcast/pod62.wav"></audio></td>
                                 <td>
-                                    0: 啊，我吃过。<br>
-                                    1: 是不是。<br>
-                                    0: 因为我之前去过山东一次吃过人家那杂粮煎饼。<br>
-                                    1: 反正跟咱们这儿，不一样是吧，正宗的人家那是正宗的。<br>
-                                    0: 本地的。<br>
+                                    speaker_1: 啊，我吃过。<br>
+                                    speaker_2: 是不是。<br>
+                                    speaker_1: 因为我之前去过山东一次吃过人家那杂粮煎饼。<br>
+                                    speaker_2: 反正跟咱们这儿，不一样是吧，正宗的人家那是正宗的。<br>
+                                    speaker_1: 本地的。<br>
                                 </td>
                                 <td><audio controls src="static/audio/podcast/pod63.wav"></audio></td>
                             </tr>
@@ -850,11 +927,11 @@
                                 <td><audio controls src="static/audio/podcast/pod71.wav"></audio></td>
                                 <td><audio controls src="static/audio/podcast/pod72.wav"></audio></td>
                                 <td>
-                                    0: 那就之前的妆都毁掉了。<br>
-                                    1: 嗯，是是是。<br>
-                                    0: 然后之后就是睫毛。<br>
-                                    1: 哦，对，那睫毛涂睫毛膏。<br>
-                                    0: 画睫呃涂睫毛的时候，先夹一下睫毛，夹。<br>
+                                    speaker_1: 那就之前的妆都毁掉了。<br>
+                                    speaker_2: 嗯，是是是。<br>
+                                    speaker_1: 然后之后就是睫毛。<br>
+                                    speaker_2: 哦，对，那睫毛涂睫毛膏。<br>
+                                    speaker_1: 画睫呃涂睫毛的时候，先夹一下睫毛，夹。<br>
                                 </td>
                                 <td><audio controls src="static/audio/podcast/pod73.wav"></audio></td>
                             </tr>
@@ -863,11 +940,11 @@
                                 <td><audio controls src="static/audio/podcast/pod81.wav"></audio></td>
                                 <td><audio controls src="static/audio/podcast/pod82.wav"></audio></td>
                                 <td>
-                                    0: 嗯哪三个字。<br>
-                                    1: 足力健。<br>
-                                    0: 哦听说过。<br>
-                                    1: 那你给我讲讲。<br>
-                                    0: 我听说这个足力健对老年人的脚底有好处，而且边走路都能健身是吗。<br>
+                                    speaker_1: 嗯哪三个字。<br>
+                                    speaker_2: 足力健。<br>
+                                    speaker_1: 哦听说过。<br>
+                                    speaker_2: 那你给我讲讲。<br>
+                                    speaker_1: 我听说这个足力健对老年人的脚底有好处，而且边走路都能健身是吗。<br>
                                 </td>
                                 <td><audio controls src="static/audio/podcast/pod83.wav"></audio></td>
                             </tr>
@@ -876,11 +953,11 @@
                                 <td><audio controls src="static/audio/podcast/pod91.wav"></audio></td>
                                 <td><audio controls src="static/audio/podcast/pod92.wav"></audio></td>
                                 <td>
-                                    0: 就这样子，嗯，一般男生都是看什么电影啊？ 推理的吗？ 还是什么。<br>
-                                    1: 也不是吧，就是看那种，嗯，具体也说不出哪种类型嘛。<br>
-                                    0: 具体也说不出。<br>
-                                    1: 嗯。<br>
-                                    0: 就是都有看一点。<br>
+                                    speaker_1: 就这样子，嗯，一般男生都是看什么电影啊？ 推理的吗？ 还是什么。<br>
+                                    speaker_2: 也不是吧，就是看那种，嗯，具体也说不出哪种类型嘛。<br>
+                                    speaker_1: 具体也说不出。<br>
+                                    speaker_2: 嗯。<br>
+                                    speaker_1: 就是都有看一点。<br>
                                 </td>
                                 <td><audio controls src="static/audio/podcast/pod93.wav"></audio></td>
                             </tr>
@@ -889,11 +966,11 @@
                                 <td><audio controls src="static/audio/podcast/pod101.wav"></audio></td>
                                 <td><audio controls src="static/audio/podcast/pod102.wav"></audio></td>
                                 <td>
-                                    0: 是了，只有你，化化起妆了才能充实呢，自信心呃然后才，感觉自己的心情是美美哒的。<br>
-                                    1: 你想化妆是，呃那就从眉毛开始说不是从打底开始说吧。<br>
-                                    0: 嗯说，好想听呢。<br>
-                                    1: 洁面以后就是拍水乳，水乳霜。<br>
-                                    0: 嗯。<br>
+                                    speaker_1: 是了，只有你，化化起妆了才能充实呢，自信心呃然后才，感觉自己的心情是美美哒的。<br>
+                                    speaker_2: 你想化妆是，呃那就从眉毛开始说不是从打底开始说吧。<br>
+                                    speaker_1: 嗯说，好想听呢。<br>
+                                    speaker_2: 洁面以后就是拍水乳，水乳霜。<br>
+                                    speaker_1: 嗯。<br>
                                 </td>
                                 <td><audio controls src="static/audio/podcast/pod103.wav"></audio></td>
                             </tr>
@@ -915,7 +992,7 @@
         <div class="acoustic-editing-module">
         <div class="content-box">
             
-            <h2 class="box-title">音乐生成</h2>
+            <h2 class="box-title">Music</h2>
             
             <div class="scrollable-table-container">
                 
@@ -1053,6 +1130,105 @@
             </table>
         </div>
     </div>
+    </div>
+
+</div>
+
+<!-- 音乐 -->
+<div class="main-container">
+    <div class="content-box">
+    <h2 class="box-title">音效生成</h2>
+        <!-- Semantic Editing - Insert -->
+        <div class="acoustic-editing-module">
+            <div class="content-box">
+                
+                <h2 class="box-title">TTA</h2>
+                
+                <div class="scrollable-table-container">
+                    
+                    <table class="data-table">
+                        <thead>
+                                <tr>
+                                    <th>Instruction</th>
+                                    <th>TTS Result</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A motor is revving and changing gears</td>
+                                    <td><audio controls src="static/audio/tta/tta1.wav"></audio></td>
+                                </tr>
+                                <tr>
+                                    <td>Loud snoring repeating</td>
+                                    <td><audio controls src="static/audio/tta/tta2.wav"></audio></td>
+                                </tr>
+                                <tr>
+                                    <td>A bell is ringing</td>
+                                    <td><audio controls src="static/audio/tta/tta3.wav"></audio></td>
+                                </tr>
+                                <tr>
+                                    <td>Thunder and a gentle rain</td>
+                                    <td><audio controls src="static/audio/tta/tta4.wav"></audio></td>
+                                </tr>
+                                <tr>
+                                    <td>A man talking as a stream of water trickles in the background</td>
+                                    <td><audio controls src="static/audio/tta/tta5.wav"></audio></td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="acoustic-editing-module">
+        <div class="content-box">
+            <h2 class="box-title">Speech + Sound单声道生成</h2>
+            <div class="scrollable-table-container">
+                <table class="data-table">
+                    <thead>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Input Prompt</th>
+                                <th>Target Text</th>
+                                <th>TTS Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Birds chirping</td>
+                                <td><audio controls src="static/audio/speech_sound/ss11.wav"></audio></td>
+                                <td>副主任及以上号别就诊人次，为二百零八点二万。</td>
+                                <td><audio controls src="static/audio/speech_sound/ss12.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td>Light rain</td>
+                                <td><audio controls src="static/audio/speech_sound/ss21.wav"></audio></td>
+                                <td>其中又有大部分百分之四十一点九认为，由该品牌影楼拍摄。</td>
+                                <td><audio controls src="static/audio/speech_sound/ss22.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td>Keyboard typing</td>
+                                <td><audio controls src="static/audio/speech_sound/ss31.wav"></audio></td>
+                                <td>本次有害昆虫科普展，是一场专门为孩子准备的科普教育活动。</td>
+                                <td><audio controls src="static/audio/speech_sound/ss32.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td>Fire engine siren</td>
+                                <td><audio controls src="static/audio/speech_sound/ss41.wav"></audio></td>
+                                <td>他陪舅舅到简阳一所学校，考察捐资改建事宜。</td>
+                                <td><audio controls src="static/audio/speech_sound/ss42.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td>Rainstorm</td>
+                                <td><audio controls src="static/audio/speech_sound/ss51.wav"></audio></td>
+                                <td>请语音留言，告诉电话精灵您没有达到父母的哪些要求。</td>
+                                <td><audio controls src="static/audio/speech_sound/ss52.wav"></audio></td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
 </div>
